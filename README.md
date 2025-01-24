@@ -45,8 +45,20 @@ git clone <repository-url>
 cd <repository-directory>
 ```
 
-### **Step 2: Build the Server Container**
-Navigate to the `server/` directory:
+### **Step 2: Pull Pre-Built Docker Images (Optional)**
+If you prefer to skip building the images, you can directly pull the pre-built images from Docker Hub:
+
+- **Server Container Image**:
+  ```bash
+  docker pull <your-dockerhub-username>/simple-python-server
+  ```
+- **Client Container Image**:
+  ```bash
+  docker pull <your-dockerhub-username>/simple-python-client
+  ```
+
+### **Step 3: Build the Server Container**
+If you prefer to build locally, navigate to the `server/` directory:
 ```bash
 cd server
 ```
@@ -55,7 +67,7 @@ Build the Docker image:
 docker build -t simple-python-server .
 ```
 
-### **Step 3: Build the Client Container**
+### **Step 4: Build the Client Container**
 Navigate to the `client/` directory:
 ```bash
 cd ../client
@@ -65,19 +77,19 @@ Build the Docker image:
 docker build -t simple-python-client .
 ```
 
-### **Step 4: Create a Custom Network**
+### **Step 5: Create a Custom Network**
 Create a Docker bridge network to enable container communication:
 ```bash
 docker network create simple-network
 ```
 
-### **Step 5: Run the Server Container**
+### **Step 6: Run the Server Container**
 Start the server container and attach it to the custom network:
 ```bash
 docker run -d --name server-container --network simple-network -p 8080:8080 simple-python-server
 ```
 
-### **Step 6: Run the Client Container**
+### **Step 7: Run the Client Container**
 Start the client container and attach it to the same network:
 ```bash
 docker run --rm --name client-container --network simple-network simple-python-client
