@@ -50,11 +50,11 @@ If you prefer to skip building the images, you can directly pull the pre-built i
 
 - **Server Container Image**:
   ```bash
-  docker pull <your-dockerhub-username>/simple-python-server
+  docker pull badal07/simple-python-server
   ```
 - **Client Container Image**:
   ```bash
-  docker pull <your-dockerhub-username>/simple-python-client
+  docker pull badal07/simple-python-client
   ```
 
 ### **Step 3: Build the Server Container**
