@@ -150,8 +150,6 @@ Response from server: Hello from Python!
 - Add logging to monitor container communication.
 - Extend the project to include persistent data storage (e.g., database).
 - Transition to a Docker Compose setup for easier management.
-
----
 ---
 
 ## **Contributions**
