@@ -152,10 +152,6 @@ Response from server: Hello from Python!
 - Transition to a Docker Compose setup for easier management.
 
 ---
-
-## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ---
 
 ## **Contributions**
